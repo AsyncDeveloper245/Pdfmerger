@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{%block content%}
+    <h3 class="text text-success text-center">Welcome To  <svg id="i-folder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M2 26 L30 26 30 7 14 7 10 4 2 4 Z M30 12 L2 12" />
+    </svg>Pdf Merger</h3>
+    <form action="" class="form" enctype="multipart/form-data" method="POST">
+        <h3><svg id="i-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30" />
+        </svg>PDF file merger</h3>
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }} 
+        </div>
+        <button type="submit" class="btn btn-success">Merge Files</button>
+
+    </form>
+<!-- <div class="d-flex justify-content-center">
+    <div class="spinner-border text-success" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div> -->
+
+  <!-- <div class="download-section m-5">
+    <svg id="i-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30" />
+    </svg> <button class="btn btn-primary">Download</button>
+  </div> -->
+
+ 
+<!-- <form method="post"  action="">{% csrf_token %}
+    
+    <input type="submit" value="OK" />
+</form>
+<a href="">PDF pages extract</a> | <a href="{% url 'pdf_merge' %}">PDF file merger</a> -->
+
+{%endblock content%}
